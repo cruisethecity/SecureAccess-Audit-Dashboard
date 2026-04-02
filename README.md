@@ -13,7 +13,7 @@ A browser-based security audit dashboard that analyzes user access logs, detects
 
 ## 📸 Dashboard Preview
 
-*(Add screenshot here after pushing to GitHub)*
+![Dashboard Preview](assets/dashboard-preview.png)
 
 ---
 
