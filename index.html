@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title> SecureAccess Audit Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🔒 SecureAccess Audit Dashboard</h1>
+    <p>Real-time access log monitoring and threat detection</p>
+  </header>
+
+  <div id="stats-bar">
+    <div class="stat-card" id="stat-total">
+      <span class="stat-number">--</span>
+      <span class="stat-label">Total Events</span>
+    </div>
+    <div class="stat-card" id="stat-failed">
+      <span class="stat-number">--</span>
+      <span class="stat-label">Failed Logins</span>
+    </div>
+    <div class="stat-card" id="stat-flagged">
+      <span class="stat-number">--</span>
+      <span class="stat-label">Flagged Accounts</span>
+    </div>
+    <div class="stat-card" id="stat-highrisk">
+      <span class="stat-number">--</span>
+      <span class="stat-label">Highest Risk User</span>
+    </div>
+  </div>
+
+  <div id="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Events</button>
+    <button class="filter-btn" data-filter="failed">Failed Logins</button>
+    <button class="filter-btn" data-filter="afterhours">After Hours</button>
+    <button class="filter-btn" data-filter="escalation">Privilege Escalation</button>
+    <button class="filter-btn" data-filter="suspicious">Suspicious Only</button>
+  </div>
+
+  <div id="table-container">
+    <table id="log-table">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Username</th>
+          <th>Action</th>
+          <th>IP Address</th>
+          <th>Department</th>
+          <th>Status</th>
+          <th>Threat Score</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
